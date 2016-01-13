@@ -6,11 +6,17 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	15.12.0
-Release:	2
+Version:	15.12.1
+Release:	1
 License:        GPLv2+
 Group:          System/Base
-Source0:        http://fr2.rpmfind.net/linux/KDE/stable/plasma/%{name}-%{version}.tar.xz
+%define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
+%if %{is_beta}
+%define ftpdir unstable
+%else
+%define ftpdir stable
+%endif
+Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
 
 URL:            https://www.kde.org/
 
@@ -22,8 +28,11 @@ BuildRequires:  pkgconfig(Qt5WebKit)
 BuildRequires:  pkgconfig(Qt5WebKitWidgets)
 
 BuildRequires:  cmake(ECM)
+BuildRequires:	cmake(KF5Auth)
 BuildRequires:  cmake(KF5CalendarCore)
+BuildRequires:  cmake(KF5Codecs)
 BuildRequires:  cmake(KF5CoreAddons)
+BuildRequires:  cmake(KF5ConfigWidgets)
 BuildRequires:  cmake(KF5KDELibs4Support)
 BuildRequires:  cmake(KF5KIO)
 BuildRequires:  cmake(KF5Syndication)
