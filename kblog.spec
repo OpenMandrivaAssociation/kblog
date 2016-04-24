@@ -6,8 +6,8 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	15.12.3
-Release:	2
+Version:	16.04.0
+Release:	1
 License:        GPLv2+
 Group:          System/Base
 %define is_beta %(if test `echo %{version} |cut -d. -f3` -ge 70; then echo -n 1; else echo -n 0; fi)
@@ -47,7 +47,7 @@ KBlog - a blogging library for KDE
 
 #--------------------------------------------------------------------
 
-%define kblog_major 4
+%define kblog_major 5
 %define libkblog %mklibname kf5blog %{kblog_major}
 
 %package -n %libkblog
@@ -60,7 +60,6 @@ KBlog - a blogging library for KDE
 
 %files -n %libkblog
 %_libdir/libKF5Blog.so.%{kblog_major}*
-%_libdir/libKF5Blog.so.5
 
 #--------------------------------------------------------------------
 
