@@ -53,7 +53,7 @@ KBlog - a blogging library for KDE
 %package -n %libkblog
 Summary:      KBlog - a blogging library for KDE
 Group:        System/Libraries
-
+Obsoletes:    %mklibname kf5blog 4
 
 %description -n %libkblog
 KBlog - a blogging library for KDE
