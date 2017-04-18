@@ -6,7 +6,7 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 License:        GPLv2+
 Group:          System/Base
@@ -42,18 +42,23 @@ BuildRequires:	libxml2-utils
 BuildRequires:	docbook-dtds
 BuildRequires:	docbook-style-xsl
 
+%define kblog_major 5
+%define libkblog %mklibname kf5blog %{kblog_major}
+
+Requires:	%{libkblog} = %{EVRD}
+
 %description
 KBlog - a blogging library for KDE
 
-#--------------------------------------------------------------------
+%files -f libkblog5.lang
 
-%define kblog_major 5
-%define libkblog %mklibname kf5blog %{kblog_major}
+#--------------------------------------------------------------------
 
 %package -n %libkblog
 Summary:      KBlog - a blogging library for KDE
 Group:        System/Libraries
 Obsoletes:    %mklibname kf5blog 4
+Requires:     %{name} = %{EVRD}
 
 %description -n %libkblog
 KBlog - a blogging library for KDE
@@ -95,5 +100,4 @@ based on %name.
 
 %install
 %ninja_install -C build
-
-
+%find_lang libkblog5
