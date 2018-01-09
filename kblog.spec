@@ -6,7 +6,7 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	17.12.0
+Version:	17.12.1
 Release:	1
 License:        GPLv2+
 Group:          System/Base
