@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kblog-17.12.1.tar.xz: eefb7edb39d16d549fd041671d8e13b04cbe67b3
+sources:
+  kblog-17.12.2.tar.xz: 573c4372fc310d6e543ae3ce844007032d22b06f
