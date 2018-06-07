@@ -6,7 +6,7 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	 17.12.2
+Version:	 18.04.2
 Release:	1
 License:        GPLv2+
 Group:          System/Base
@@ -51,6 +51,8 @@ Requires:	%{libkblog} = %{EVRD}
 KBlog - a blogging library for KDE
 
 %files -f libkblog5.lang
+%{_sysconfdir}/xdg/kblog.categories
+%{_sysconfdir}/xdg/kblog.renamecategories
 
 #--------------------------------------------------------------------
 
