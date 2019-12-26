@@ -6,7 +6,7 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:        GPLv2+
 Group:          System/Base
@@ -16,7 +16,7 @@ Group:          System/Base
 %else
 %define ftpdir stable
 %endif
-Source0:	http://download.kde.org/%{ftpdir}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{ftpdir}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 
 URL:            https://www.kde.org/
 
@@ -94,7 +94,7 @@ based on %name.
 
 %prep
 %setup -q 
-%apply_patches
+%autopatch -p1
 
 %build
 %cmake_kde5
