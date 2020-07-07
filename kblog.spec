@@ -6,7 +6,7 @@
 
 Summary:        KBlog - a blogging library for KDE
 Name:           kblog
-Version:	20.04.2
+Version:	20.04.3
 Release:	1
 License:        GPLv2+
 Group:          System/Base
